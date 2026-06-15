@@ -92,6 +92,12 @@
             let t=await response.text();
             document.getElementById("result").innerText=t;
         }
+        async function cos(){
+            let a=document.getElementById("num1").value;
+            let response=await fetch(`http://localhost:8080/calc/cos/${a}`);
+            let t=await response.text();
+            document.getElementById("result").innerText=t;
+        }
         async function spiral(){
             let response=await fetch(`http://localhost:8080/spiral_matrix_printing`);
             let t=await response.text();
